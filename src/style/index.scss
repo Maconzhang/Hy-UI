@@ -1,0 +1,23 @@
+@import './transition.scss';
+@import './iconfont.scss';
+
+// function scss
+@function pxTorem($px){
+  @return ($px / 37.5px) * 1rem;
+}
+
+
+@function vm($px){
+  @return ($px / 37.5) * 1rem;
+}
+
+@mixin bck{
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+//globl transition css
+$red: #FF0000;
+$theme-xiaoliu: #FEDA01;
+$fontWeight: 700;
+$bckColor: rgb(245, 245, 245);

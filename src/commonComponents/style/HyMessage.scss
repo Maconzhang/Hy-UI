@@ -1,0 +1,15 @@
+.hy-message{
+	position: absolute;
+	width: 60vw;
+	height: vm(30);
+	line-height: vm(30);
+	font-size: vm(12);
+	border-radius: 50px;
+	top: vm(20);
+	left: 10vw;
+	right: 10vw;
+	padding: 0 vm(15);
+	margin:auto;
+	background-color: gray;
+	color: white;
+}

@@ -1,0 +1,19 @@
+.HyDialog{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100vw;
+	.HyDialog-mask{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: black;
+		opacity: 0.5;
+	}
+	.HyDialog-content{
+		position: relative; //必须设置层级关系, 否则mask会遮挡该层
+	}
+}
