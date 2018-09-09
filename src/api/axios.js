@@ -10,7 +10,6 @@ axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded
 const service = axios.create({
   // baseURL: '/api', // api的base_url
   timeout: 5000, // 请求超时时间
-   // headers: {'content-type': 'application/x-www-form-urlencoded'},
    // withCredentials: true,
 })
 

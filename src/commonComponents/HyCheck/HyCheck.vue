@@ -1,16 +1,16 @@
 <template lang="html">
-		<div class="hy-check-group"> 
+		<div class="hy-check-group">
 			<label class="hy-ui-label" @click="click()">
 				<div class="hy-ui-label-hd">
 					<!-- <input type="radio" name="" value="" class="hy-ui-label-hd-input"> -->
-					<span class="hy-ui-label-hd-icon" 
+					<span class="hy-ui-label-hd-icon"
 					:class="[
 						isChecked ? 'checkedIcon' : 'unCheckedIcon'
 					]">
 					</span>
 				</div>
-				<div class="hy-ui-label-bd"> 
-					<slot></slot> 
+				<div class="hy-ui-label-bd">
+					<slot></slot>
 				</div>
 			</label>
 		</div>
@@ -29,7 +29,6 @@ export default {
 	},
 	methods: {
 		click() {
-			
 			this.$emit('input', this.label);
 		}
 	},
@@ -46,6 +45,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+	$check-height: vm(40);
+	$check-line-height: vm(40);
+	$check-font-size: vm(16);
+	$check-icon-height: vm(18);
+	$check-icon-width: vm(18);
+
 	.checkedIcon{
     background-image: url('~@/assets/checked.png');
   }
@@ -53,12 +58,11 @@ export default {
     background-image: url('~@/assets/unChecked.png');
   }
 	.hy-check-group{
-		padding: vm(5) 0;
 		.hy-ui-label{
 				display: flex;
-				line-height: vm(40);
-				height: vm(40);
-				font-size: vm(16);
+				line-height: $check-line-height;
+				height: $check-height;
+				font-size: $check-font-size;
 				&-hd{
 					display: flex;
 					align-self: center;
@@ -68,8 +72,8 @@ export default {
 						left: 0;
 					}
 					&-icon{
-						width: vm(18);
-						height: vm(18);
+						width: $check-icon-height;
+						height: $check-icon-width;
 						background-size: 100% 100%;
 						display: inline-block;
 					}

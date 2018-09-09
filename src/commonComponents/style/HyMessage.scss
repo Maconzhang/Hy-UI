@@ -12,4 +12,13 @@
 	margin:auto;
 	background-color: gray;
 	color: white;
+	z-index: 101;
+	text-indent: 2px;
+
+	i{
+		height: vm(30);
+		line-height: vm(30);
+		font-size: vm(16);
+	}
+
 }

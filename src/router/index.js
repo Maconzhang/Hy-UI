@@ -9,26 +9,26 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    // {
-    //   path: '/HelloWorld',
-    //   name: 'HelloWorld',
-    //   component: HelloWorld
-    // },
-    // {
-    //   path: '/hello',
-    //   name: 'HelloWorld2',
-    //   component: HelloWorld2
-    // },
-    // {
-    //   path: '/hello3',
-    //   name: 'HelloWorld3',
-    //   component: HelloWorld3
-    // },
-    // {
-    //   path: '/index',
-    //   name: 'index',
-    //   component: index
-    // },
+    {
+      path: '/HelloWorld',
+      name: 'HelloWorld',
+      component: HelloWorld
+    },
+    {
+      path: '/hello',
+      name: 'HelloWorld2',
+      component: HelloWorld2
+    },
+    {
+      path: '/hello3',
+      name: 'HelloWorld3',
+      component: HelloWorld3
+    },
+    {
+      path: '/index',
+      name: 'index',
+      component: index
+    },
     {
       path: '/',
       name: '首页',
@@ -46,6 +46,6 @@ export default new Router({
     }
   ],
   scrollBehavior (to, from, savedPosition) {
-  return { x: 0, y: 0 }
-}
+    return { x: 0, y: 0 }
+  }
 })

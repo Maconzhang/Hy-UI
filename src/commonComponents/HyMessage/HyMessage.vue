@@ -1,7 +1,7 @@
 <template lang="html">
 	<transition name="message">
 		<div class="hy-message" v-show="visible">
-			<i class="iconfont icon-delete"></i>
+			<!-- <i class="iconfont icon-delete"></i>  -->
 			{{ message}}
 		</div>
 	</transition>
@@ -18,7 +18,7 @@ export default {
 	},
 	mounted() {
 		setTimeout(() => {
-			this.flag = true
+			this.flag = true;
 			this.$el.parentNode.removeChild(this.$el);
 		}, this.duration)
 	}

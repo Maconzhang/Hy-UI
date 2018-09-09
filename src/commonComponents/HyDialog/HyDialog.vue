@@ -1,13 +1,12 @@
 <template lang="html">
-  <transition name="breadcrumb">
-  <div class="HyDialog" v-show="visible">
-		<div class="HyDialog-mask"  @click="close"></div>
-			<div class="HyDialog-content">
+  <div class="HyDialog">
+    <div class="HyDialog-mask"  @click="close" v-show="visible"></div>
+    <transition name="breadcrumb">
+			<div class="HyDialog-content" v-if="visible">
 				<slot></slot>
 			</div>
+    </transition>
   </div>
-  </transition>
-
 </template>
 
 <script>

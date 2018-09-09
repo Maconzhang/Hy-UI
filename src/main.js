@@ -15,7 +15,7 @@ Vue.config.productionTip = false
 // Vue.component('liuLoading', liuLoading)
 
 //commonComponent组件的scss
-// import './commonComponents/style/index.scss'
+import './commonComponents/style/index.scss'
 
 // import 'simplemde/dist/simplemde.min.css'
 // import VueSimplemde from 'vue-simplemde'

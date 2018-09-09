@@ -3,7 +3,10 @@
 
     <div class="item">
       <div>Hy-input</div>
-      <Hy-input v-bind:type="'number'"></Hy-input>
+      <Hy-input :type="'number'" :placeholder="'请输入手机号码'" ></Hy-input><br>
+      <Hy-input :type="'number'" :placeholder="'请输入验证码'" :showCheck="true" v-on:sendCheckNumber="sendCheckNumber"
+      v-on:close="isGetNummber=false" :isGetNummber="isGetNummber"></Hy-input>
+
     </div>
 
     <div class="item">
@@ -25,20 +28,20 @@
     <div class="item">
       <div> HyLoading['指令式'](三秒后关闭)</div>
       <button type="button" name="button" @click="showLoad2">showLoading</button>
-      <!-- <HyLoading v-if="showLoading"></HyLoading> -->
     </div>
-    
-    <div class="item"> 
+
+    <div class="item">
       <div>HyMessage</div>
       <button @click="showMes">Show Message</button>
     </div>
 
-    <div class="item"> 
+    <div class="item">
       <div>HyCheck</div>
       <HyCheck v-model="checkValue" label="1">China</HyCheck>
       <HyCheck v-model="checkValue" label="2">USA</HyCheck>
+      <HyCheck v-model="checkValue" label="3">UK</HyCheck>
     </div>
-    
+
   </div>
 </template>
 
@@ -64,16 +67,16 @@ export default {
       showDialog: false,
       showLoading: false,
       showLoading2: false,
-      checkValue: 1
+      checkValue: 1,
+      isGetNummber: false
 		}
   },
   mounted() {
-    
+
   },
   methods: {
     showMes() {
       message('出现异常了！！！')
-          
     },
     showLoad() {
       this.showLoading = true
@@ -86,14 +89,16 @@ export default {
       setTimeout(_ => {
         this.showLoading2 = false
       }, 3000)
+    },
+    sendCheckNumber() {
+      this.isGetNummber = true;
     }
   }
 }
 </script>
- 
+
 <style lang="scss" scoped>
-  
-  .helllo2{
+   .helllo2{
     box-sizing: border-box;
     width: 100vw;
     height: 100vh;
@@ -117,6 +122,8 @@ export default {
     margin-left: 10vw;
     margin-right: 10vw;
     background-color: white;
+    border-radius: 4px;
+    padding: 10px;
   }
 
   .item{

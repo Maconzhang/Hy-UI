@@ -1,7 +1,7 @@
 <template>
     <div class="hy-loading">
         <div class="hy-loading-content">
-            <i class="iconfont icon-loading spin"></i> <br>
+          <i class="iconfont icon-loading3 spin"></i> <br>
             加载中...
         </div>
     </div>
@@ -18,7 +18,7 @@ export default {
         position: fixed;
         top: 0;
         left: 0;
-        
+
         .hy-loading-content {
             text-align: center;
             width: vm(120);
